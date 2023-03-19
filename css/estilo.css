@@ -1,225 +1,110 @@
-@charset "UTF-8";
-@font-face {
-    font-family:'Android';
-    src: url('/fontes/idroid.otf');
-    font-weight: normal;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
 }
-@font-face {
-    font-family:'Bebas Neue';
-    src: url('/fontes/BebasNeue-Regular.ttf');
+
+* {
+  box-sizing: border-box;
+  outline: 0;
 }
-:root{
-   --cor0: #c5ebd6;
-   --cor1: #83e1ad;
-   --cor2:  #3ddc84;
-   --cor3: #1e5e3a;
-   --cor4:  #06351a;
-   --fontes-padrao:Arial,verdana,sans-serif;
-   --fonte-android:'Android', cursive;
-   --fonte-destaque:'Bebas Neue', cursive;
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
 }
-*{
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
-   
+
+
+.container {
+  max-width: 450px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;  
+  flex-direction: column;
+  flex-basis: auto;
+}
+
+.container {
+  max-width: 450px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;  
+  flex-direction: column;
+  flex-basis: auto;
+}
+.container h1{
+  text-align: center;
+}
+
+form input, form label, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
  
 }
-body {
-    background-color:var(--cor0);
-    font-family: var(--fontes-padrao);
-    
-}
-main p{
-margin: 15px 0px;
-text-align: justify;
-text-indent: 30px;
-line-height: 1.3em; /*espaço entre linhas do texto */
-font-size: 15px;
+input{
+  border-radius: 10px;
+  background-color: #9e9e9e;
 }
 
-h2{
-color: var(--cor3);
-     font-family:var(--fonte-android);   
-     background-image: linear-gradient(to right, var(--cor2),transparent); 
-   text-indent: 8px; 
-   font-size: 1.3em;
-   font-weight: normal;
-}
-main strong{
-    color:var(--cor3);
-    
-    font-weight: bold;
-   
-}
-main a{
-    color: var(--cor4);
-    font-weight: bold;
-    background-color: var(--cor1);
-    padding: 2px 6px;
-    border-radius: 5px;
+form input:focus {
+  outline: 1px solid var(--primary-color);
 }
 
-main a:hover{
-    background-color: var(--cor1);
-    color: var(--cor3);
-    text-decoration: underline 1.5px var(--cor4);
+form button {
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
 }
 
-
-header >p{
-    font-family: var(--fontes-padrao);
-    font-size: 1.2em;
-    max-width: 600px;
-    margin: auto;
-    padding-right: 10px;
-    padding-left:10px ;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.411); 
+form button:hover {
+  background: var(--primary-color-darker);
 }
 
-header h1{
-    font-weight: normal;
-    
-    font-family: var(--fonte-android);  
-    margin-bottom: 20px;  
-    font-size: 3em;  
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.692); 
+.calculadora {
+  width: 400px;
 }
 
-
-header{
-    background-image: linear-gradient(to bottom,var(--cor2),var(--cor4));
-    background-color:var(--cor3); 
-    color: white;   
-    min-height: 150px;
-    text-align: center;
-    padding-top: 40px;
-}
-nav{
-   background-color: var(--cor4);
-   padding: 0px;
-   box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.644);
-   display: flex;
-   
+.display {
+  font-size: 2em;
+  width: 100%;
+  text-align: right;
 }
 
-nav li{
-display: inline-block;
-margin: 2px;
-padding: 10px;
-font-size: 15px;
-border-radius: 5px;
-
-
-}
-nav a{
-   
-    color:var(--cor2);  
-    padding: 10px;
-    font-weight: bold;
-    
+.btn {
+  width: 100%;
+  height: 50px;
+  font-size: 1em;
+  border: none;
+  background: #dfdfdf;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
-nav li:hover{
-    background-color: var(--cor1);
-    transition: background-color 0.5s ease-in-out;
-  
+.btn:hover {
+  background: #9e9e9e;
+  color: red;
 }
-nav li a:hover{
-    color:var(--cor4);
-    transition: color 1s ease-in-out;
-}
-main{
-    background-color:white;
-    max-width: 1000px;
-    min-width: 320px;
-    margin: auto;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 30px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius:10px ;
-}
-main article h1{
-    font-weight: normal !important;;
-    color: var(--cor4);
-    font-family: var(--fonte-android);
-    font-size: 1.7em;
-}
-main img{
-    width: 100%;
-}
-main img.bugdroid{
-   max-width: 350px;
-    display : block;
-    margin: auto;
-}
-div.video{
-background-color: var(--cor3);
-margin-bottom: 30px;
-margin: 0px -20px 30px -20px;
-padding: 20px;
-position: relative;
-padding-bottom: 50%;
-
-    
-}
-div.video > iframe{
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-
-}
-aside{
-    background-color: var(--cor1);
-    padding: 11px;
-    border-radius: 10px;
-    
-
-}
-main  ul{
-   margin-left: 40px;
-   
-   columns: 2;
-   list-style-type: '\2714\00A0\00A0'; /* coloca emoji na lista*/
-}
-aside li{
-    padding: 2px;
-    display: list-item;
-
-  
-}
-aside > h3{
-    
-    display: block;
-    font-family: var(--fontes-padrao);
-    color: white;
-    background-color:var(--cor3);
-    padding: 10px;
-    margin: -11px -11px 0px -11px;
-    border-radius: 10px 10px 0px 0px;
-}
-footer{
-    background-color: var(--cor3);
-    color: white;
-    text-align: center;
-    font-size: 0.8em;
-    padding: 5px;
-}
-
-footer a{
-color: white;
-font-weight: bold;
-}
-footer a:hover{
-    text-decoration: underline;
-    color: var(--cor1);
-}
-
-
-
-
 
 
